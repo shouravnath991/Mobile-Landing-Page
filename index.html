@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Phone</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" ><img src="img/logo.png" alt="" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just Phone <br> <span>Passion</span> </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda deleniti animi laboriosam quos est laudantium doloribus. Aliquid, cumque, soluta voluptatibus voluptate atque, tenetur deserunt mollitia ab fugiat facere exercitationem nihil temporibus doloremque .</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/iphone.png" class="phone" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/iphone-thumb.png" alt="" onclick="imgSlider('img/iphone.png');changeCircleColor('#154E85')";></li>
+            <li><img src="img/oneplus-thumb.png" alt="" onclick="imgSlider('img/oneplus.png');changeCircleColor('#767EA2')";></li>
+            <li><img src="img/samsung-thumb.png" alt="" onclick="imgSlider('img/samsungS.png');changeCircleColor('#D2AE3E')";></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><i class="fa-brands fa-facebook-f" ></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter" ></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram" ></i></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.phone').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
